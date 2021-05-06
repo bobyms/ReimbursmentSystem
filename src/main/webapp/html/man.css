@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+form {
+	border: 3px solid #f1f1f1;
+}
+
+button {
+	width: 300px;
+	height: 30px;
+	border: none;
+	border-radius: 17px;
+	padding-left: 7px;
+	color: blue;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+div {
+	width: 382px;
+	overflow: hidden;
+	margin: auto;
+	margin: 20 0 0 450px;
+	padding: 80px;
+	background: #23463f;
+	border-radius: 15px;
+}
+
+h4 {
+	text-align: center;
+	color: #277582;
+	padding: 20px;
+}
+
+table{
+	width: 50%;
+}
+
+.input-group mb-3{
+	width: 50%;
+}
+.form-control{
+	width: 50%;
+}

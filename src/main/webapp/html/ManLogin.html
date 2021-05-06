@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Manager Login</title>
+<!--  <link rel="stylesheet" type="text/css" href="man.css">-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body>
+	<div>
+		<h4 style="text-align: center; color: #277582;padding: 20px;" id="welcomeHeader">Welcome user</h4>
+		<form method="post" action="/Ass1/logout.change">
+			<input style = "display:inline-block;padding:0.3em 1.2em;margin:0 0.3em 0.3em 0;border-radius:2em;box-sizing: border-box;text-decoration:none;font-family:'Roboto',sans-serif;font-weight:300;color:#FFFFFF;background-color:#4eb5f1;text-align:center;transition: all 0.2s;"type="submit" value ="logout">
+		</form>
+	</div>
+	<br>
+	<br>
+		<form method="post" onclick="getPendingReims()">
+			<input style="display:inline-block;padding:0.3em 1.2em;margin:0 0.1em 0.1em 0;border:0.16em solid rgba(255,255,255,0);border-radius:2em;box-sizing: border-box;text-decoration:none;font-family:'Roboto',sans-serif;font-weight:300;color:#FFFFFF;text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);text-align:center;transition: all 0.2s;"type="button" onclick="getPendingReims()"value ="Pending Reimbursements">
+		</form>
+		<form method="post" action="/Ass1/getsessionreims.change" onclick="getReims()">
+			<input style="display:inline-block;padding:0.3em 1.2em;margin:0 0.1em 0.1em 0;border:0.16em solid rgba(255,255,255,0);border-radius:2em;box-sizing: border-box;text-decoration:none;font-family:'Roboto',sans-serif;font-weight:300;color:#FFFFFF;text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);text-align:center;transition: all 0.2s;"type="submit" onclick="getReims()" value ="All Reimbursements">
+		</form>
+		<!--  <form method="post" action="/Ass1/ByID.change">
+			<input placeholder="Employee ID" name="ID">
+			<input style="display:inline-block;padding:0.3em 1.2em;margin:0 0.1em 0.1em 0;border:0.16em solid rgba(255,255,255,0);border-radius:2em;box-sizing: border-box;text-decoration:none;font-family:'Roboto',sans-serif;font-weight:300;color:#FFFFFF;text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);text-align:center;transition: all 0.2s;"type="submit" value ="Reimbursements by ID">
+		</form>
+		-->
+	<br>
+	<br>
+	<form method="post" action="/Ass1/Approve.change">
+		<input placeholder="Enter ID to approve" name="id">
+		<input type="submit" value ="approve">
+	</form>
+	<form method="post" action="/Ass1/Deny.change">
+		<input placeholder="Enter ID to deny" name="id">
+		<input type="submit" value ="deny">
+	</form>
+	
+	<table id="reimTable" class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th scope="col">ID</th>
+				<th scope="col">Amount</th>
+				<th scope="col">Type</th>
+				<th scope="col">Status</th>
+				<th scope="col">Description</th>
+				<th scope="col">Submission Date</th>
+			</tr>
+		</thead>
+		<tbody id="tbod">
+		</tbody>
+	</table>
+
+	<script type="text/javascript" src="js/manager.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
+</html>
